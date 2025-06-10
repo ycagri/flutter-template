@@ -8,7 +8,7 @@ final appTheme = ThemeData(
   chipTheme: const ChipThemeData(
     padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
   ),
-  cardTheme: const CardTheme(
+  cardTheme: const CardThemeData(
     color: Colors.white,
     surfaceTintColor: Colors.white,
     elevation: 4,
