@@ -1,0 +1,36 @@
+name: Continuous Delivery Frontend Macos
+
+on:
+  workflow_dispatch:
+  push:
+    tags: v*
+
+jobs:
+  deploy:
+    name: Deploy iOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate build
+        run: dart run build_runner build
+
+      - name: Deploy IOS
+        run: ./scripts/github/deploy-ios.sh
+        env:
+          BUNDLE_ID: ${{ secrets.BUNDLE_ID }}
+          DEVELOPMENT_TEAM_ID: ${{ secrets.DEVELOPMENT_TEAM_ID }}
+          PROVISIONING_PROFILE_UUID: ${{ secrets.PROVISIONING_PROFILE_UUID }}
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          BUILD_CERTIFICATE_PASSWORD: ${{ secrets.BUILD_CERTIFICATE_PASSWORD }}
+          BUILD_PROVISIONING_PROFILE_BASE64: ${{ secrets.BUILD_PROVISIONING_PROFILE_BASE64 }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER }}
