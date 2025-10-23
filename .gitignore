@@ -121,3 +121,5 @@ app.*.symbols
 .idea/
 lib/l10n/app_localizations*
 lib/di/injection.config.dart
+
+test/utils/mocks.mocks.dart

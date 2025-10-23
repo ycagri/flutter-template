@@ -38,3 +38,11 @@ final appTheme = ThemeData(
   sliderTheme: const SliderThemeData(),
   textTheme: const TextTheme(),
 );
+
+const shimmerGradient = LinearGradient(
+  colors: [Color(0xAA767676), Color(0xAAF4F4F4), Color(0xAA767676)],
+  stops: [0.1, 0.3, 0.4],
+  begin: Alignment(-1.0, -0.3),
+  end: Alignment(1.0, 0.3),
+  tileMode: TileMode.clamp,
+);

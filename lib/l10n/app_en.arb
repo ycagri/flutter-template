@@ -1,4 +1,7 @@
 {
   "@@locale": "en",
-  "appName": "Template Application"
+  "appName": "Template Application",
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithApple": "Sign in with Apple",
+  "signInError": "We couldn’t sign you in right now. Please check your connection and try again."
 }
