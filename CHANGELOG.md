@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/ycagri/flutter-template/compare/v0.1.0...v0.2.0) (2025-10-23)
+
+
+### Features
+
+* social sign in template is introduced. ([17d1e68](https://github.com/ycagri/flutter-template/commit/17d1e68d0e2be85a8e178cc645186b55a05db0b9))
+
 # [0.1.0](https://github.com/ycagri/flutter-template/compare/v0.0.0...v0.1.0) (2025-06-10)
 
 
