@@ -1,4 +1,7 @@
 {
   "@@locale": "tr",
-  "appName": "Şablon Uygulama"
+  "appName": "Şablon Uygulama",
+  "signInWithGoogle": "Google ile Giriş Yap",
+  "signInWithApple": "Apple ile Giriş Yap",
+  "signInError": "Şu anda oturumunuzu açamadık. Lütfen internet bağlantınızı kontrol edip yeniden deneyin."
 }
