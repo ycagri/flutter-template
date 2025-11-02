@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/ycagri/flutter-template/compare/v0.2.0...v0.3.0) (2025-11-02)
+
+
+### Features
+
+* base tab view template is introduced. ([094e5d1](https://github.com/ycagri/flutter-template/commit/094e5d15e1c945d88bab036f64ec76e52a9195e4))
+
 # [0.2.0](https://github.com/ycagri/flutter-template/compare/v0.1.0...v0.2.0) (2025-10-23)
 
 
