@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_template/home/home_page.dart';
+import 'package:flutter_template/leaderboard/leaderboard_page.dart';
+import 'package:flutter_template/profile/profile_page.dart';
+import 'package:flutter_template/sign_in/sign_in_page.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:go_router/go_router.dart';
 
@@ -33,5 +37,29 @@ class Application extends StatelessWidget {
     routerConfig: _buildRouter(),
   );
 
-  GoRouter _buildRouter() => GoRouter(initialLocation: '/', routes: []);
+  GoRouter _buildRouter() => GoRouter(
+    initialLocation: '/',
+    routes: [
+      GoRoute(
+        path: HomePage.path,
+        name: HomePage.name,
+        builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: LeaderboardPage.path,
+        name: LeaderboardPage.name,
+        builder: (context, state) => const LeaderboardPage(),
+      ),
+      GoRoute(
+        path: ProfilePage.path,
+        name: ProfilePage.name,
+        builder: (context, state) => const ProfilePage(),
+      ),
+      GoRoute(
+        path: SignInPage.path,
+        name: SignInPage.name,
+        builder: (context, state) => const SignInPage(),
+      ),
+    ],
+  );
 }
