@@ -1,3 +1,5 @@
+import 'package:flutter_template/profile/profile_cubit.dart';
+import 'package:flutter_template/profile/profile_repository.dart';
 import 'package:flutter_template/sign_in/sign_in_cubit.dart';
 import 'package:flutter_template/sign_in/sign_in_repository.dart';
 import 'package:go_router/go_router.dart';
@@ -9,5 +11,7 @@ import 'package:mockito/annotations.dart';
   MockSpec<GoRouter>(),
   MockSpec<SignInCubit>(),
   MockSpec<SignInRepository>(),
+  MockSpec<ProfileCubit>(),
+  MockSpec<ProfileRepository>(),
 ])
 void main() {}

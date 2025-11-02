@@ -5,13 +5,18 @@ import 'package:flutter_template/common/theme.dart';
 import 'package:flutter_template/di/injection.dart';
 import 'package:flutter_template/sign_in/sign_in_cubit.dart';
 import 'package:flutter_template/widget/shimmer.dart';
+import 'package:go_router/go_router.dart';
 
 import '../common/bloc_state.dart';
+import '../home/home_page.dart';
 import '../l10n/app_localizations.dart';
 import '../widget/apple_sign_in_button.dart';
 import '../widget/google_sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
+  static const String name = 'sign_in';
+  static const String path = '/sign_in';
+
   const SignInPage({super.key});
 
   @override
@@ -67,6 +72,8 @@ class SignInPage extends StatelessWidget {
                 duration: const Duration(seconds: 3),
               ),
             );
+          } else if (state.status == SignInStatus.signInSuccessful) {
+            context.goNamed(HomePage.name);
           }
         },
       ),
